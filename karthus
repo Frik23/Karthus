@@ -1,0 +1,8 @@
+["Karthus"] = {
+		[_Q] = { name = "KarthusLayWaste", speed = math.huge, delay = 0.65, range = 875, width = 190*2, collision = false, aoe = false, type = "circular", dmgAP = function(source, target) local m=minionManager(MINION_JUNGLE, 190, target, MINION_SORT_HEALTH_ASC); return (#m.objects == 0 and 2 or 1) * (20+20*source:GetSpellData(_Q).level+0.3*source.ap) end},
+		[_W] = { name = "KarthusWallOfPain", speed = math.huge, delay = 0.25, range = 1000, width = 160, collision = false, aoe = true, type = "circular"},
+		[_E] = { name = "KarthusDefile", speed = math.huge, delay = 0.25, range = 550, width = 550, collision = false, aoe = true, type = "circular", dmgAP = function(source, target) return 10+20*source:GetSpellData(_Q).level+0.2*source.ap end},
+		[_R] = { name = "KarthusFallenOne", range = math.huge, dmgAP = function(source, target) return 100+150*source:GetSpellData(_Q).level+0.60*source.ap end}
+	},
+	
+	
